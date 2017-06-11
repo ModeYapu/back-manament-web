@@ -1,0 +1,209 @@
+html {
+    height: 100%;
+    font-size: 20px;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    font-size: 20px;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #fff;
+    #app {
+        height: 100%;
+    }
+    a {
+        text-decoration: none;
+    }
+    ul {
+        li {
+            list-style: none;
+        }
+    }
+    //css3绝对居中
+    .css3-center {
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        display: box;
+        box-orient: horizontal;
+        box-pack: center;
+        box-align: center;
+    }
+    //所有的行高
+    .height {
+        height: 44px;
+        line-height: 44px;
+    }
+
+    //查询页左边栏字体颜色。
+    .ellipsis-left-color {
+        color: #202020;
+        font-size: 12px;
+    }
+    //右边栏字体颜色
+    .ellipsis-right-color {
+        color: #8c8c8c;
+        font-size: 12px;
+    }
+    //详情页左边样式
+    .ellipsis-left {
+        display: inline-block;
+        width: 30%;
+        vertical-align: top;
+        padding-left: 5px;
+        color: #202020;
+        font-size: 12px;
+    }
+    //超出隐藏 专注于详情页
+    .ellipsis {
+        display: inline-block;
+        text-align: right;
+        width: 65%;
+        color: #8C8C8C;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        -webkit-text-overflow: ellipsis;
+        -moz-text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    //查询页超出隐藏
+    .ellipsis-search {
+        display: inline-block;
+        width: 40%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        -webkit-text-overflow: ellipsis;
+        -moz-text-overflow: ellipsis;
+        white-space: nowrap;
+        color: #8c8c8c;
+    }
+    //字体右对齐
+    .ellipsis-right {
+        text-align: right;
+    }
+
+    .per {
+        padding: 0 5px;
+        width: auto;
+        font-size: 10px;
+    }
+    //超出多行隐藏
+    .ellipsis-multi {
+        word-break: break-all;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .box-buttom {
+        margin-bottom: 30px;
+    }
+    //header渐变
+    .gradient-header {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #137ab8), color-stop(100%, #157cba));
+        background: -webkit-linear-gradient(top, #137ab8 0%, #157cba 100%);
+        background: linear-gradient(to bottom, #137ab8 0%, #157cba 100%);
+    }
+
+    //底部渐变
+    .gradient-footer {
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #157bb8), color-stop(0%, #2e8ec7), color-stop(100%, #1c8eca));
+        background: -webkit-linear-gradient(top, #157bb8 0%, #2e8ec7 50%, #1c8eca 100%);
+        background: linear-gradient(to bottom, #157bb8 0%, #2e8ec7 50%, #1c8eca 100%);
+    }
+    //上边框蓝色
+    .line {
+        border-top: 3px solid rgb(126, 206, 244);
+        padding: 0;
+    }
+    //动画移动
+    .tran {
+        -webkit-transform: translate3d(75%,0,0);
+        transform: translate3d(75%,0,0);
+        -webkit-transition: all 0.5s ease-in;
+        transition: all 0.5s ease-in;
+        overflow: hidden!important;
+    }
+    .vux-popup-mask{
+        top:-12.5rem!important;
+
+    }
+
+    //跳转页面动画
+    .bounce-out-enter-active,
+    .bounce-out-leave-active,
+    .bounce-in-enter-active,
+    .bounce-in-leave-active {
+        will-change: transform;
+        height: 100%;
+        position: absolute;
+        left: 0;
+    }
+
+    .bounce-out-enter-active {
+        animation-name: popInLeft;
+    }
+
+    .bounce-out-leave-active {
+        animation-name: popOutRight;
+    }
+
+    .bounce-in-enter-active {
+        perspective: 1000;
+        animation-name: popInRight;
+    }
+
+    .bounce-in-leave-active {
+        animation-name: popOutLeft;
+    }
+
+    @keyframes popInLeft {
+        from {
+            opacity: 0;
+            transform: translate3d(-100%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes popOutLeft {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+            transform: translate3d(-100%, 0, 0);
+        }
+    }
+
+    @keyframes popInRight {
+        from {
+            opacity: 0;
+            transform: translate3d(100%, 0, 0);
+        }
+        to {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    @keyframes popOutRight {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+            transform: translate3d(100%, 0, 0);
+        }
+    }
+
+}
